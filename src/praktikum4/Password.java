@@ -7,7 +7,6 @@ public class Password {
 	public static void main(String[] args) {
 		String salasona;
 		
-		
 		do {
 			System.out.println("Palun sisesta oma salasõna. ");
 			salasona = TextIO.getln();
@@ -18,9 +17,6 @@ public class Password {
 			else 
 				System.out.println("Vale salasõna ");
 		} while (!salasona.equals("saladus"));
-	
-		
-		
 		
 
 	}
