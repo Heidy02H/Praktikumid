@@ -12,13 +12,16 @@ public class Numbrid5 {
 		trykiAaris(tabeliSuurus);
 
 		for (int i = 0 ; i < tabeliSuurus; i++) {
+			System.out.print("| ");
 			for (int j = 0; j < tabeliSuurus; j++) {
 				if (i == j || i+j == tabeliSuurus -1) {
-					System.out.print("x");
+					System.out.print("x ");
 				} else {
-					System.out.print(0);
+					System.out.print("0 ");
 				}
+				
 			}
+			System.out.print("|");
 			System.out.println();
 		}
 		
@@ -27,7 +30,7 @@ public class Numbrid5 {
 	}
 	
 	public static void trykiAaris(int tabeliSuurus) {
-		for (int i = 0; i < tabeliSuurus * 2-1; i++) {
+		for (int i = 0; i < tabeliSuurus*2 + 3 ; i++) {
 			System.out.print("-");
 		}
 		System.out.println();
