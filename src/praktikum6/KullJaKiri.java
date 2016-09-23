@@ -5,48 +5,36 @@ import lib.TextIO;
 public class KullJaKiri {
 
 	public static void main(String[] args) {
-		int vise = kasutajaSisestus("Kull või kiri (sisesta 0 või 1)?", 0, 1);
-		
-		if( vise ==  ) {
-			System.out.println("kulll");
+		int kasutajaArvab = kasutajaSisestus("Sisesta kull (0) voi kiri (1)?", 0, 1);
+
+		int vise = (Math.random() > 0.5) ? 1 : 0;
+
+		if (kasutajaArvab == vise) {
+			System.out.println("Sina arvasid " + kasutajaArvab);
+			System.out.println("Viske tulemus oli " + vise);
+			System.out.println("Sul on õigus");
+		} else {
+			System.out.println("Sina arvasid " + kasutajaArvab);
+			System.out.println("Viske tulemus oli " + vise);
+			System.out.println("Sa eksisid");
 		}
-		else {
-			System.out.println("kiri");
-		}
-		
-		
 
 	}
-	
+
 	public static int kasutajaSisestus(String kysimus, int min, int max) {
-		
-		
-		
-		
+
 		System.out.println(kysimus);
-		
+
 		int sisestus = TextIO.getlnInt();
-		
-		return (int)(Math.random() * max);
-		
-	
-	
+
+		while (min > sisestus || max < sisestus) {
+
+			System.out.println("Ei sobi, sisesta uus täisarv vahemikus " + min + " ja " + max);
+			sisestus = TextIO.getlnInt();
+
+		}
+		return sisestus;
+
 	}
-	
-//	public static int kasutajaSisestus(int min, int max) {
-//		
-//		System.out.println("Sisesta üks täisarv");
-//		
-//		int sisestus = TextIO.getlnInt();
-//		
-//		
-//		while (min > sisestus || max < sisestus) {
-//			
-//			System.out.println("Ei sobi, sisesta uus täisarv");
-//			sisestus = TextIO.getlnInt();
-//		
-//		} 
-//		return sisestus;
-//
-//	}
+
 }
