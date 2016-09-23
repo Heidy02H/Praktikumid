@@ -1,7 +1,5 @@
 package praktikum6;
 
-import java.util.Random;
-
 public class DiceGame {
 
 	// Kirjutada täringumäng:
@@ -26,13 +24,8 @@ public class DiceGame {
 	}
 
 	public static int throwDice() {
-
-		Random rand = new Random();
-		// nextInt excludes the top value so we have to add 1 to include the top
-		// value
-		int randomNum = rand.nextInt(5 + 1) + 1;
-
-		return randomNum;
+		return 1 + (int) (Math.random() * 6);
+		
 	}
 
 }
