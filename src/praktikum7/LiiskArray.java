@@ -14,7 +14,9 @@ public class LiiskArray {
 		
 		System.out.println("Sisesta inimeste nimed");
 		
-		
+		for (String item : nimekiri) {
+			System.out.println(item);
+		}
 		
 
 	}
