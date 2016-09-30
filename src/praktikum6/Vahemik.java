@@ -15,7 +15,7 @@ public class Vahemik {
 	
 	public static int kasutajaSisestus(int min, int max) {
 		
-		System.out.println("Sisesta üks täisarv");
+		System.out.println("Sisesta üks täisarv vahemikus " + min + " ja " + max );
 		
 		int sisestus = TextIO.getlnInt();
 		
