@@ -15,6 +15,10 @@ public class Meetodid {
 
 	}
 	
+//	public static int kasutajaSisestus(String kysimus, int min, int max) {
+//		
+//	}
+	
 	public static int kuup(int number ) {
 	
 		return number*number*number; 
