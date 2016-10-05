@@ -1,5 +1,7 @@
 package praktikum7;
 
+import java.util.ArrayList;
+
 import lib.TextIO;
 
 public class LiiskArray {
@@ -10,13 +12,20 @@ public class LiiskArray {
 
 		int inimesteArv = TextIO.getlnInt();
 		
-		String[] nimekiri = new String[inimesteArv];
+		ArrayList<String> nimekiri = new ArrayList<String>();
 		
-		System.out.println("Sisesta inimeste nimed");
 		
-		for (String item : nimekiri) {
-			System.out.println(item);
+		for (int i = 0; i < inimesteArv ; i++) {
+			System.out.println("Sisesta nimi nr. " + (i+1));
+			String nimi = TextIO.getlnString();
+			nimekiri.add(nimi);
 		}
+		
+		
+		int liisk = Arvaara.randomNumber(0, inimesteArv);
+		
+		System.out.println(nimekiri.get(liisk));
+		
 		
 
 	}
