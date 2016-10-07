@@ -8,15 +8,10 @@ public class Massiiiv2D {
 
 		int[] numbrid = new int[] { 2, 9, 5, 6, 1 };
 
-		int[][] A = { { 21, 0, 6, -1 }, 
-					{ 7, -3, 16, 5 }, 
-					{ -5, -2, 8, -9 } 
-					};
+		int[][] A = { { 21, 0, 6, -1 }, { 7, -3, 16, 5 }, { -5, -2, 8, -9 } };
 
 		System.out.println(maksimum(A));
 		System.out.println();
-		
-		
 
 	}
 
@@ -33,22 +28,20 @@ public class Massiiiv2D {
 	public static int maksimum(int[][] maatriks) {
 		for (int i = 0; i < maatriks.length; i++) {
 			maksimum(maatriks[i]);
-			
+
 		}
-		
-		int max = maatriks[0][maatriks[0].length -1];
-		
-		for (int i = 0; i < maatriks.length; i++){
-			
-			if (max < maatriks[i][maatriks[0].length-1])
-				max = maatriks[i][maatriks[0].length-1];	
-			
+
+		int max = maatriks[0][maatriks[0].length - 1];
+
+		for (int i = 0; i < maatriks.length; i++) {
+
+			if (max < maatriks[i][maatriks[0].length - 1])
+				max = maatriks[i][maatriks[0].length - 1];
+
 		}
-			
 
 		return max;
 
 	}
-	
 
 }
