@@ -6,7 +6,7 @@ public class Massiiiv2D {
 
 	public static void main(String[] args) {
 
-		int[] numbrid = new int[] { 2, 9, 5, 6, 1 };
+		
 
 		int[][] A = { { 21, 0, 6, -1 }, { 7, -3, 16, 5 }, { -5, -2, 8, -9 } };
 
