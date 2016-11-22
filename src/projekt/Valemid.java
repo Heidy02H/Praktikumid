@@ -1,5 +1,15 @@
 package projekt;
 
+import java.io.FileReader;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import com.opencsv.CSVReader;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -14,9 +24,41 @@ public class Valemid extends Application {
 	Scene scene;
 	Button button;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		launch(args);
-
+		
+		CSVReader reader = new CSVReader(new FileReader("korrutamine1.csv"));
+		
+		String [] nextLine;
+		
+		//Dictionary of containing the choices of the student
+		HashMap<String, String> choice = new HashMap<String, String>();
+		
+		
+	     while ((nextLine = reader.readNext()) != null) {
+	        // nextLine[] is an array of values from the line
+	    	 String [] a= nextLine[0].split(";");
+	        choice.put(a[0],a[1]);
+	     }
+	     
+	     Set set = choice.entrySet();
+	      Iterator iterator = set.iterator();
+	      while(iterator.hasNext()) {
+	         Map.Entry mentry = (Map.Entry)iterator.next();
+	         System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+	         System.out.println(mentry.getValue());
+	      }
+	     
+	     
+		
+//	     List<String[]> myEntries = reader.readAll();
+		 reader.close();
+	     
+//	     for(String[] entries: myEntries) {
+//	    	 System.out.println(Arrays.toString(entries));
+//	     }
+	     
+	     
 	}
 
 	@Override
