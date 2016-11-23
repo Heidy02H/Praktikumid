@@ -1,10 +1,8 @@
 package projekt;
 
 import java.io.FileReader;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -26,46 +24,14 @@ public class Valemid extends Application {
 
 	public static void main(String[] args) throws Exception {
 		launch(args);
-		
-		CSVReader reader = new CSVReader(new FileReader("korrutamine1.csv"));
-		
-		String [] nextLine;
-		
-		//Dictionary of containing the choices of the student
-		HashMap<String, String> choice = new HashMap<String, String>();
-		
-		
-	     while ((nextLine = reader.readNext()) != null) {
-	        // nextLine[] is an array of values from the line
-	    	 String [] a= nextLine[0].split(";");
-	        choice.put(a[0],a[1]);
-	     }
-	     
-	     Set set = choice.entrySet();
-	      Iterator iterator = set.iterator();
-	      while(iterator.hasNext()) {
-	         Map.Entry mentry = (Map.Entry)iterator.next();
-	         System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
-	         System.out.println(mentry.getValue());
-	      }
-	     
-	     
-		
-//	     List<String[]> myEntries = reader.readAll();
-		 reader.close();
-	     
-//	     for(String[] entries: myEntries) {
-//	    	 System.out.println(Arrays.toString(entries));
-//	     }
-	     
-	     
+
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Õpime valemeid");
 
-		// Checkboxes
+		// Create CheckBoxes
 		CheckBox box1 = new CheckBox("1ga korrutamine");
 		CheckBox box2 = new CheckBox("2ga korrutamine");
 		CheckBox box3 = new CheckBox("3ga korrutamine");
@@ -76,24 +42,75 @@ public class Valemid extends Application {
 		button = new Button();
 		button.setText("Alusta");
 
-		button.setOnAction(e -> handleOptions(box1, box2, box3, box4));
+		button.setOnAction(e -> {
+			try {
+				handleOptions(box1, box2, box3, box4);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
 
 		VBox layout = new VBox(10);
 		layout.setPadding(new Insets(10));
 		layout.getChildren().addAll(box1, box2, box3, box4, button);
 
-		scene = new Scene(layout, 300, 250);
+		scene = new Scene(layout, 500, 500);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
 	}
 
 	// Handle Checkboxes
-	private Object handleOptions(CheckBox box1, CheckBox box2, CheckBox box3, CheckBox box4) {
+	private Object handleOptions(CheckBox box1, CheckBox box2, CheckBox box3, CheckBox box4) throws Exception {
+		HashMap<String, String> choice = new HashMap<String, String>();
 		if (box1.isSelected()) {
+			String file = "korrutamine1.csv";
+			readInChoice(choice, file);
 
 		}
+		if (box2.isSelected()) {
+			String file = "korrutamine2.csv";
+			readInChoice(choice, file);
+
+		}
+		if (box3.isSelected()) {
+			String file = "korrutamine3.csv";
+			readInChoice(choice, file);
+
+		}
+		if (box4.isSelected()) {
+			String file = "korrutamine4.csv";
+			readInChoice(choice, file);
+
+		}
+
 		return null;
+	}
+
+	// Put the formulas that the user chooses into a HashMap
+	public static void readInChoice(HashMap<String, String> choice, String file) throws Exception {
+
+		CSVReader reader = new CSVReader(new FileReader(file));
+
+		String[] nextLine;
+
+		while ((nextLine = reader.readNext()) != null) {
+			// nextLine[] is an array of values from the line
+			String[] a = nextLine[0].split(";");
+			choice.put(a[0], a[1]);
+		}
+
+		Set set = choice.entrySet();
+		Iterator iterator = set.iterator();
+		while (iterator.hasNext()) {
+			Map.Entry mentry = (Map.Entry) iterator.next();
+			System.out.print("key is: " + mentry.getKey() + " & Value is: ");
+			System.out.println(mentry.getValue());
+		}
+
+		reader.close();
+
 	}
 
 }
