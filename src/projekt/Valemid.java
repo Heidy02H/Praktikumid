@@ -13,14 +13,15 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Valemid extends Application {
 
 	Stage window;
-	Scene scene;
-	Button button;
+	Scene scene1, scene2;
+	Button button1, button2;
 
 	public static void main(String[] args) throws Exception {
 		launch(args);
@@ -30,6 +31,7 @@ public class Valemid extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Õpime valemeid");
+		Label instruction = new Label("Palun vali milliseid valemeid soovid õppida.");
 
 		// Create CheckBoxes
 		CheckBox box1 = new CheckBox("1ga korrutamine");
@@ -37,12 +39,12 @@ public class Valemid extends Application {
 		CheckBox box3 = new CheckBox("3ga korrutamine");
 		CheckBox box4 = new CheckBox("4ga korrutamine");
 
-		// Button
+		// Button 1
 
-		button = new Button();
-		button.setText("Alusta");
+		button1 = new Button();
+		button1.setText("Alusta");
 
-		button.setOnAction(e -> {
+		button1.setOnAction(e -> {
 			try {
 				handleOptions(box1, box2, box3, box4);
 			} catch (Exception e1) {
@@ -50,14 +52,39 @@ public class Valemid extends Application {
 				e1.printStackTrace();
 			}
 		});
+		
+		button1.setOnAction(e -> primaryStage.setScene(scene2));
+		
+		// Button 2
+		
+		button2 = new Button();
+		button2.setText("Valmis");
+		
+		// Layout1
 
-		VBox layout = new VBox(10);
-		layout.setPadding(new Insets(10));
-		layout.getChildren().addAll(box1, box2, box3, box4, button);
+		VBox layout1 = new VBox(10);
+		layout1.setPadding(new Insets(10));
+		layout1.getChildren().addAll(instruction, box1, box2, box3, box4, button1);
+		
+		// Layout2
+		
+		VBox layout2 = new VBox(10);
+		layout2.setPadding(new Insets(10));
+		layout2.getChildren().addAll(button2);
+		
+		// First scene
 
-		scene = new Scene(layout, 500, 500);
-		primaryStage.setScene(scene);
+		scene1 = new Scene(layout1, 500, 500);
+		
+		
+		// Second scene
+		
+		scene2 = new Scene(layout2, 400, 400);
+		
+		primaryStage.setScene(scene1);
 		primaryStage.show();
+		
+		
 
 	}
 
