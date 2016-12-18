@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -60,6 +61,12 @@ public class Valemid extends Application {
 		button2 = new Button();
 		button2.setText("Valmis");
 		
+		// Question and answer
+		
+		Label question = new Label("Küsimus");
+		TextField answer = new TextField();
+		
+		
 		// Layout1
 
 		VBox layout1 = new VBox(10);
@@ -70,7 +77,7 @@ public class Valemid extends Application {
 		
 		VBox layout2 = new VBox(10);
 		layout2.setPadding(new Insets(10));
-		layout2.getChildren().addAll(button2);
+		layout2.getChildren().addAll(question, answer, button2);
 		
 		// First scene
 
@@ -80,6 +87,12 @@ public class Valemid extends Application {
 		// Second scene
 		
 		scene2 = new Scene(layout2, 400, 400);
+		
+		// Validate answer
+		
+		
+		
+		
 		
 		primaryStage.setScene(scene1);
 		primaryStage.show();
@@ -138,6 +151,10 @@ public class Valemid extends Application {
 
 		reader.close();
 
+	}
+	
+	public String askQuestion() {
+		return "";
 	}
 
 }
