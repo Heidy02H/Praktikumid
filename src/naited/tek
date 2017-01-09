@@ -1,0 +1,30 @@
+Klassimeetod  (class method) , mida Javas kirjeldab võtmesõna static, on kasutatav n.ö. "igas olukorras", s.t. ei ole vajalik objektorienteeritud paradigma järgimine (esialgu püüame oma kursuses läbi ajada klassimeetoditega). Täpsemalt öeldes - klassimeetodi poole pöördumiseks ei ole vajalik objekti olemasolu.
+Klassimeetodi poole pöördumiseks kirjutatakse reeglina:
+
+Klassi_nimi . meetodi_nimi ( faktilised_parameetrid );
+Kui meetod on defineeritud jooksvas klassis, siis võib klassi nime (ja punkti) ära jätta.
+
+Isendimeetod (instance method) on rakendatav mingile etteantud objektile (seda objekti tähistatakse meetodi kirjelduses võtmesõnaga this). Isendimeetodi rakendamist nim. ka teate saatmiseks objektile.
+Isendimeetodi poole pöördumiseks kirjutatakse reeglina:
+
+objekt . meetodi_nimi ( faktilised_parameetrid );
+Kui isendimeetodi poole pöördumisel on objektiks this, siis võib selle (ja punkti) ära jätta. 
+
+Klasside ja liideste piiritlejad
+
+piiritlejate puudumisel on klassid nähtavad oma paketi piires.
+public - klassid on nähtavad omas paketis ning kõikjal, kus neid imporditakse. Ühes Java-failis saab olla ülimalt üks public-klass.
+abstract - klass võib sisaldada abstraktseid meetodeid, isendite loomine ei ole võimalik, liideste puhul kehtib vaikimisi.
+final - klassi ei saa spetsialiseerida (tuletada alamklasse). Näit. String on niisugune klass.
+
+Muutujate ja meetodite piiritlejad
+
+piiritlejate puudumisel on muutujad ja meetodid kõigis sama paketi klassides kättesaadavad [ja päranduvad kõigisse alamklassidesse, mis paiknevad samas paketis].
+public - muutujad ja meetodid on kättesaadavad kõikjal (import) ja päranduvad sama klassi alamklassidesse.
+protected - muutujad ja meetodid on kättesaadavad kõigis sama paketi klassides ja päranduvad sama klassi alamklassidesse.
+private - muutujad ja meetodid pole kättesaadavad üheski teises klassis ega pärandu ühessegi alamklassi.
+abstract - meetodi sisu pole määratud, see tuleb määrata (üle katta) pärimisel.
+final - muutuja on konstant (selle nimi on soovitav kirjutada ainult suurtähtedega), meetod ei ole üle kaetav.
+native - meetodi sisu on programmeeritud mingis muus keeles/keskkonnas.
+static - klassimuutujad ja klassimeetodid (pole üle kaetavad).
+synchronized - meetod lukustab töödeldava objekti (this) teiste lõimede eest.
