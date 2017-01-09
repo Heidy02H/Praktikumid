@@ -28,3 +28,282 @@ final - muutuja on konstant (selle nimi on soovitav kirjutada ainult suurtähted
 native - meetodi sisu on programmeeritud mingis muus keeles/keskkonnas.
 static - klassimuutujad ja klassimeetodid (pole üle kaetavad).
 synchronized - meetod lukustab töödeldava objekti (this) teiste lõimede eest.
+
+Programmeerimiskeele süntaksit kirjeldab...
+a. testide hulk
++ b. grammatika
+c. API  Vale
+d. IDE
+
+Milline alljärgnevatest keeltest esindab objektorienteeritud programmeerimise paradigmat? 
+a. Haskell
+b. Ada
+c. Prolog Vale
++ d. Smalltalk
+
+Milline alljärgnevatest keeltest esindab imperatiivse programmeerimise paradigmat?
++ a. Ada
+b. Haskell
+c. Smalltalk
+d. Prolog
+
+Milline alljärgnevatest keeltest esindab loogilise programmeerimise paradigmat? 
+a. Haskell 
+b. Smalltalk 
+c. Ada 
++ d. Prolog
+
+Milline järgnevatest tüüpidest EI OLE algtüüp (primitive type)?
+a. boolean
+b. double
++ c. Long 
+d. float
+
+Milline järgnevatest keele Java tüüpidest on algtüüp (primitive type)?
+a. Long
++ b. boolean
+c. Double
+d. Integrer
+
+Mida tähistab keeles Java järgmine kirjutis? -0xa
+a. Ei ole Javas lubatud
+b. 16-bitine täisarv -10 Vale
+c. 32-bitine täisarv -10
+d. 64-bitine täisarv -10
+
+Mida tähistab keeles Java järgmine kirjutis?  -0.5e-2 
+a. 32-bitine reaalarv -0.005
+b. 64-bitine reaalarv -50.00
+c. 64-bitine reaalarv -0.05
++ d. 64-bitine reaalarv -0.005 
+
+Mida tähistab keeles Java järgmine kirjutis? -0.5e-2f 
+a. 32-bitine reaalarv -0.05 
++ b. 32-bitine reaalarv -0.005
+c. 64-bitine reaalarv -0.005
+d. 32-bitine reaalarv -50.00
+
+Millise tulemuse annab järgmine programmilõik? 
+int a = 9; 
+int b = ++a / 5; 
+a. a==10 && b==1 
+b. a==9 && b==1 
+c. a==9 && b==2 
++ d. a==10 && b==2
+
+Millise tulemuse annab järgmine programmilõik? 
+[code java]
+int a = 4;
+int b = a++ / 5;
+[/code]
+a. a==5 && b==0.8
+b. a==4 && b==0
+c. a==5 && b==1
++ d. a==5 && b==0 
+
+Mida väljendab alljärgneva programmilõigu teine lause? 
+String s = "Hello"; 
+int len = s.length(); 
+a. klassi String klassimeetodi poole pöördumist 
+b. jooksva klassi isendimeetodi poole pöördumist
+c. klassi Integer konstruktori poole pöördumist
+d. objekti s isendimeetodi poole pöördumist
+
+Milline tingimus kirjeldab n mittekuulumist poollõiku [0, 10) ? 
+a. (n >= 0) && (n < 10)
++ b. (n <0) || (n >= 10)
+c. (n >=0) || (n < 10)
+d. (n < 0) && (n >= 10)
+
+Võtmesõna "while" järele ümarsulgudesse kirjutatav tingimus on... 
+a. Java virtuaalmasina peatamise tingimus
+b. tsükli lõpetamise tingimus
+c. meetodist väljumise tingimus
++ d. tsükli jätkamise tingimus 
+
+Käsu return järele kirjutatud avaldisega määratakse: 
+a. tegelikud parameetrid
+b. formaalsed parameetrid
+c. signatuur
++ d. tagastusväärtus
+
+Java return lause...
+a. annab juhtimise tagasi meetodi väljakutsujale
+b. tekitab erindi (vea)
+c. ei tee midagi (tühilause)
+d. väljastab teksti
+
+Meetodi nimi koos piiritlejate, parameetrite tüüpide ning tagastusväärtuse tüübiga on tuntud kui meetodi:
+a. tegelikud parameetrid Vale
++ b. signatuur
+c. formaalsed parameetrid
+d. tagastusväärtus
+
+Java rakendus (application) peab sisaldama meetodit, mille signatuur on... 
+a. public static int main (String[] ) 
+b. public void main (String ) 
+c. public void run() 
++ d. public static void main (String[] )
+
+Millist tüüpi väärtuse tagastab meetod m?
+public static int m (double d, String s)
++ a. int
+b. double
+c. String
+d. void
+
+Javadoc @version abil dokumenteeritakse: 
++ a. klassi versiooniinfot
+b. meetodi tagastusväärtust
+c. meetodi parameetrit
+d. meetodi poolt tekitatavaid erindeid
+
+Javadoc @since abil dokumenteeritakse:
+a. klassi versiooniinfot
+b. hetkel kasutatavat Java kompilaatori versiooni
+c. Java versiooni, millest alates seda klassi ei toetata
++ d. varaseimat Java kompilaatori versiooni, millega klass kompileerub
+
+Javadoc @param abil dokumenteeritakse:
++ a.meetodi parameetrit
+
+Java koodistiil nõuab konstantide nimede kirjutamist:
+a. ainult suurtähtedega
+b. kreeka keeles
+c. suure algustähega Vale
++ d. väikese algustähega
+
+Java koodistiil nõuab klassinimede kirjutamist:
++ a.suure algustähega
+b. ainult väikeste tähtedega
+c. väikese algustähega
+d. ainult suurtähtedega
+
+Teate saatmine objektile tähendab:
+a. objektile mälu eraldamist
++ b. pöördumist vastava isendimeetodi poole
+c. objektile uue stringiesituse määramist
+d. pöördumist vastava klassimeetodi poole
+
+Objekti (isendi) identiteedi Javas määrab:
++ a. mäluaadress
+b. objekti esitus sõne kujul
+c. isendimuut ujate väärtuste hulk
+d. klassimuutujate väärtuste hulk
+
+Destruktor on:
+a. dünaamilise pikkusega andmestruktuur
++ b. meetod isendi hävitamiseks, keeles Java puudub
+c. isendimeetod, mis teisendab objekti stringiks
+d. meetod isendi loomiseks
+
+Liides List keeles Java võimaldab: 
+a. küsida andmekogumi järgmist elementi
+b. salvestada paare "võti-väärtus" Vale
+c. otsustada, kumb kahest elemendist on suurem
+d. salvestada andmestruktuuri korduvaid elemente, mida eristatakse indeksi järgi
+
+Liides Comparable keeles Java võimaldab:
+a. salvestada paare "võti-väärtus"
+b. lisada hulka korduvaid elemente
++ c. otsustada, kumb kahest elemendist on suurem
+d. küsida andmekogumi järgmist elementi
+
+Java break lause... 
+a. annab juhtimise tagasi meetodi väljakutsujale
+b. lõpetab Java virtuaalmasina töö
+c. lõpetab sisemise tsükli sammu
++ d. lõpetab sisemise tsükli või valikulause täitmise
+
+Paaride "võti - väärtus" salvestamiseks sobib Java APIs klass: 
+ a. TreeSet 
+b. ArrayList 
++ c. HashMap 
+d. Iterator 
+
+Paisktabelit esindab Java APIs liides:
+a. Collection
++ b. Map
+c. Comparable
+d. Set
+
+Millise eriolukorra (loetletutest) tuvastamine ja töötlemine on Javas mõttekas: 
+a. ThreadDeath 
++ b. Exception
+c. Error 
+d. OutOfMemoryError 
+
+Eriolukorda, mille töötlemine programmeerija poolt on Javas kohustuslik, nimetatakse:
++ a. checked exception
+b. RuntimeException Vale
+c. Error
+d. Exception
+
+Baidivoo lugemisel meetodiga read() annab voo lõppemisest märku:
+a. (String)null
++ b. (int)-1 
+c. (byte)-128
+d. (int)0
+
+Millist kasutajaliidese aspekti juhib paigutushaldur?
++ a. liidese visuaalne kuju
+b. liidese mudel
+c. liidese seos välise keskkonnaga
+d. liidese reageerimine sündmustele
+
+Ühene pärimine tähendab, et: 
+a. teate poolt aktiviseeritav meetod valitakse programmi lahendamise ajal 
+b. teate poolt aktiviseeritav meetod valitakse programmi kompileerimise ajal 
+c. klass võib omadusi pärida mitmelt ülemklassilt 
++ d. iga klass saab olla ülimalt ühe klassi alamklass 
+
+Rakendi kuva värskendamist saab tellida pöördudes meetodi ... poole.
+a. start
++ b. repaint
+c. paint Vale
+d. init
+
+Rakendi passiivseks muutumisel pöördutakse meetodi ... poole. 
++ a. stop
+b. start 
+c. repaint 
+d. init 
+
+Rakendi elutsükli alguses täidetakse meetod:
+a. start Vale
+b. init
+c. repaint
+d. paint
+
+Milline käsk joonistab ringi (pinna) läbimõõduga 50 pikselit?
+a. g.drawOval (50, 50, 50, 50);
+b. g.drawOval (0, 0, 100, 100);
+c. g.fillOval (0, 0, 100, 100);  Vale
+d. g.fillOval (50, 50, 50, 50);
+
+Milline käsk joonistab ringjoone läbimõõduga 50 pikselit? 
+a. g.fillOval (50, 50, 50, 50); 
+b. g.fillOval (0, 0, 100, 100); 
+c. g.drawOval (0, 0, 100, 100); 
++ d. g.drawOval (50, 50, 50, 50);
+
+Milline käsk joonistab ringjoone raadiusega 50 pikselit?
+a.g.fillOval (50, 50, 50, 50);
+b. g.drawOval (50, 50, 50, 50);
++ c. g.drawOval (0, 0, 100, 100);
+
+Java algtüüpidesse kuuluvate andmete sisestamiseks on ette nähtud meetodid klassis: 
+a. DataInputStream 
+b. ByteArrayInputStream 
+c. File 
+d. FileReader Vale
+
+Java algtüüpidesse kuuluvate andmete väljastamimseks on ette nähtud meetodid klassis:
+a. FileWriter
+b. ByteArrayOutputStream
+c. File
++ d. DataOutputStream
+
+Millist kasutajaliidese aspekti juhivad kuularid? 
+a.liidese reageerimine sündmustele
+
